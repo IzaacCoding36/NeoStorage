@@ -118,6 +118,7 @@ html {
     align-items: center;
     gap: 1em;
     font-size: 20px;
+    border: 2px solid #4d1475;
 }
 
 .item strong {
@@ -127,6 +128,7 @@ html {
     justify-content: center;
     width: 40px;
     height: 40px;
-    Background: #4d1475;
+    Background: #0c821f;
     font-weight: 400;
+    border: 2px solid #000000;
 }
