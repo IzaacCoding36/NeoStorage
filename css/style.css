@@ -1,5 +1,6 @@
 html {
     background: radial-gradient(farthest-corner at right top,#0c821f, #000000);
+    background-attachment: fixed;
     height: 100%;
     font-family: 'Roboto', cursive;
 }
@@ -9,6 +10,14 @@ html {
     display: flex;
     align-items: flex-start;
     gap: 2em;
+}
+
+.Titulo { color: green;
+          box-shadow: 0px 0px 25px purple;
+          text-shadow: 0px 0px 5px grey;
+          background: radial-gradient(farthest-corner at right top,#4d1475, #000000);
+          border-radius:50px;
+          font-family:'Raleway',sans-serif;
 }
 
 .principal {
@@ -21,7 +30,7 @@ html {
     background: #000000;
     border-radius: 50px;
     gap: 2em;
-    border: 2px solid #4d1475;
+    box-shadow: 0px 0px 25px purple;
 }
   
 .mochila {
