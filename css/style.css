@@ -121,11 +121,13 @@ html {
     border: 4px solid purple;
     color: #FFFFFF;
     cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
 }
 
 #cadastrar:hover {
     background-color: purple;
     border: 4px solid green;
+    transition: background-color 0.3s, border 0.3s;
 }
 
 .lista {
@@ -160,4 +162,11 @@ html {
     height: 40px;
     Background: #4d1475;
     font-weight: 400;
+}
+
+button {
+    color: white;
+    background-color: #4d1475;
+    border: none;
+    margin: 5px;
 }
