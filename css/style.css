@@ -166,7 +166,14 @@ html {
 
 button {
     color: white;
-    background-color: #4d1475;
+    background-color: crimson;
     border: none;
-    margin: 5px;
+    border-radius: 25px;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: red;
+    transition: background-color 0.3s;
 }
