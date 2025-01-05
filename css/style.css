@@ -1,5 +1,6 @@
 html {
     background: radial-gradient(farthest-corner at right top,#0c821f, #000000);
+    background-color: #0c821f;
     background-attachment: fixed;
     height: 100%;
     font-family: 'Roboto', cursive;
