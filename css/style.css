@@ -1,11 +1,11 @@
-html {
-    background: radial-gradient(farthest-corner at right top,#0c821f, #000000);
-    background-color: #0c821f;
-    background-attachment: fixed;
-    height: 100%;
-    font-family: 'Roboto', cursive;
-    cursor: default;
-}
+html {background: linear-gradient(90deg, #0c821f 0%, #000000 50%, #0c821f 100%);
+      background-size: 200% 200%;
+      background-color: #0c821f;
+      background-attachment: fixed;
+      animation: gradientBG 20s ease infinite;
+      height: 100%;
+      font-family: 'Roboto', cursive;
+      cursor: default;}
 
 @keyframes glow {0% {box-shadow: 0px 0px 25px purple;}
             50% {box-shadow: 0px 0px 25px magenta;}
@@ -17,165 +17,162 @@ html {
             100% {text-shadow: 0px 0px 15px green;}
 }
 
-.conteudo {
-    padding: 10vh 3em 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 2em;
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.Titulo { color: green;
-          box-shadow: 0px 0px 25px purple;
-          background: radial-gradient(farthest-corner at right top,#4d1475, #000000);
-          border-radius:50px;
-          font-family:'Raleway',sans-serif;
-          animation-name: glow, glow2; animation-duration: 4s; animation-delay: 1.5s; animation-iteration-count: infinite;
-}
+.conteudo {padding: 10vh 3em 0;
+           display: flex;
+           align-items: flex-start;
+           gap: 2em;}
 
-.principal {
-    flex-grow: 1;
-    flex-basis: auto;
-    min-width: 600px;
-    padding: 4em 2em 2em;
-    box-sizing: border-box;
-    display: flex;
-    background: #000000;
-    border-radius: 50px;
-    gap: 2em;
-    box-shadow: 0px 0px 25px purple;
-    animation-name: glow; animation-duration: 4s; animation-delay: 1.5s; animation-iteration-count: infinite;
-}
+.Titulo {color: green;
+         box-shadow: 0px 0px 25px purple;
+         border: 3px outset purple;
+         background: radial-gradient(farthest-corner at right top,#4d1475, #000000);
+         border-radius: 50px;
+         font-family:'Raleway',sans-serif;
+         animation-name: glow, glow2; animation-duration: 4s; animation-delay: 1.5s; animation-iteration-count: infinite;}
+
+.principal {flex-grow: 1;
+            flex-basis: auto;
+            min-width: 600px;
+            padding: 4em 2em 2em;
+            box-sizing: border-box;
+            display: flex;
+            background: #000000;
+            border-radius: 50px;
+            gap: 2em;
+            box-shadow: 0px 0px 25px purple;
+            border: 3px outset purple;
+            animation-name: glow; animation-duration: 4s; animation-delay: 1.5s; animation-iteration-count: infinite;}
   
-.mochila {
-    min-width: 170px;
-    max-width: 170px;
-    height: 180px;
-    padding-top: 80px;
-    background-color: #d84736;
-    box-shadow: inset 0 6px 0 2px #e64a3e, 0 -93px 0 -77px #3b1045, 0 -93px 0 -72px #d84736, 0 -93px 0 -68px #3b1045;
-    background-image: linear-gradient(to right, transparent 5px, transparent 20px, transparent 1px, transparent 25px, transparent 5px, transparent 20px, transparent 20px, transparent 86px, #c1382e 45px, #c1382e 230px, transparent 25px, transparent 172px );
-    background-position: center 254px;
-    background-size: 305px 6px;
-    background-repeat: repeat-x; 
-    border: 5px solid #410c38;
-    border-radius: 85px 85px 44px 44px;
-    display: inline-block;
-    vertical-align: top;
-    flex-basis: auto;
-    flex-grow: 1;
-}
+.mochila {min-width: 170px;
+          max-width: 170px;
+          height: 180px;
+          padding-top: 80px;
+          background-color: #d84736;
+          box-shadow: inset 0 6px 0 2px #e64a3e, 0 -93px 0 -77px #3b1045, 0 -93px 0 -72px #d84736, 0 -93px 0 -68px #3b1045;
+          background-image: linear-gradient(to right, transparent 5px, transparent 20px, transparent 1px, transparent 25px, transparent 5px, transparent 20px, transparent 20px, transparent 86px, #c1382e 45px, #c1382e 230px, transparent 25px, transparent 172px );
+          background-position: center 254px;
+          background-size: 305px 6px;
+          background-repeat: repeat-x; 
+          border: 5px solid #410c38;
+          border-radius: 85px 85px 44px 44px;
+          display: inline-block;
+          vertical-align: top;
+          flex-basis: auto;
+          flex-grow: 1;}
   
-.mochila:before, .mochila:after {
-    display: block;
-    content: '';
-    position: absolute;
-  }
+.mochila:before, .mochila:after {display: block; content: ''; position: absolute;}
   
-.mochila:before {
-    height: 75px;
-    width: 118px;
-    background-image: radial-gradient(circle closest-corner at 13px 29px , #af342c, #af342c 2px, transparent 2px, transparent), radial-gradient(circle closest-corner at 13px 29px , #491033, #491033 4px, transparent 4px, transparent), linear-gradient(to bottom, transparent 10px, transparent 15px, #491033 5px, #491033 18px, transparent 18px, transparent 100px), linear-gradient(to right, #af342c 10px, #af342c 10px, transparent 10px, transparent 16px, #af342c 9px, #af342c 50px), linear-gradient(to bottom, #af342c 8px, #af342c 16px, #491033 8px, #491033 30px, #af342c 20px, #af342c 72px, #af342c 10px, #af342c 57px, #af342c 5%);
-    margin-left: 22px;
-    margin-top: 58px;
-    border: 4px solid #491033;
-    border-radius: 11px;
-    box-shadow: 0 4px 0 0 #c1382e, inset 0px 4px 1px 0 #c03527;
-    content: '||';
-    color: transparent;
-    font-family: Comic Sans MS;
-    font-weight: bold;
-    z-index: 1;
-    text-shadow: rgb(0, 0, 0) -2px -86px 0px;
-    font-size: 14px;
-}
+.mochila:before {height: 75px;
+                 width: 118px;
+                 background-image: radial-gradient(circle closest-corner at 13px 29px , #af342c, #af342c 2px, transparent 2px, transparent), radial-gradient(circle closest-corner at 13px 29px , #491033, #491033 4px, transparent 4px, transparent), linear-gradient(to bottom, transparent 10px, transparent 15px, #491033 5px, #491033 18px, transparent 18px, transparent 100px), linear-gradient(to right, #af342c 10px, #af342c 10px, transparent 10px, transparent 16px, #af342c 9px, #af342c 50px), linear-gradient(to bottom, #af342c 8px, #af342c 16px, #491033 8px, #491033 30px, #af342c 20px, #af342c 72px, #af342c 10px, #af342c 57px, #af342c 5%);
+                 margin-left: 22px;
+                 margin-top: 58px;
+                 border: 4px solid #491033;
+                 border-radius: 11px;
+                 box-shadow: 0 4px 0 0 #c1382e, inset 0px 4px 1px 0 #c03527;
+                 content: '||';
+                 color: transparent;
+                 font-family: Comic Sans MS;
+                 font-weight: bold;
+                 z-index: 1;
+                 text-shadow: rgb(0, 0, 0) -2px -86px 0px;
+                 font-size: 14px;}
   
-.mochila:after {
-    margin-left: 67px;
-    margin-top: -30px;
-    background: #4d1475;
-    width:26px;
-    height:26px;
-    border: 3px solid #491033;
-    border-radius: 3px;
-    transform: rotate(45deg);
-}
+.mochila:after {margin-left: 67px;
+                margin-top: -30px;
+                background: #4d1475;
+                width:26px;
+                height:26px;
+                border: 3px solid #491033;
+                border-radius: 3px;
+                transform: rotate(45deg);}
 
-.adicionar {
-    width: 100%;
-}
+.adicionar {width: 100%;}
 
-.adicionar input {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0.5em 0 1em;
-    padding: 1em 0.5em;
-    border-radius: 50px;
-    border: 4px solid grey;
-    outline: none;
-}
+.adicionar input {width: 100%;
+                  box-sizing: border-box;
+                  margin: 0.5em 0 1em;
+                  padding: 1em 0.5em;
+                  border-radius: 50px;
+                  border: 4px outset grey;
+                  box-shadow: 0 0 5px grey, 0 0 10px grey, 0 0 15px grey;
+                  outline: none;}
 
-.adicionar label {
-    display: block;
-}
+.adicionar label {display: block;}
 
-#cadastrar {
-    background-color: #4d1475;
-    border: 4px solid purple;
-    color: #FFFFFF;
-    cursor: pointer;
-    transition: background-color 0.3s, border 0.3s;
-}
+#cadastrar {background-color: #4d1475;
+            border: 4px outset purple;
+            box-shadow: 0 0 5px purple, 0 0 10px purple, 0 0 15px purple;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: background-color 1s, box-shadow 1s, border 1s;}
 
-#cadastrar:hover {
-    background-color: purple;
-    border: 4px solid green;
-    transition: background-color 0.3s, border 0.3s;
-}
+#cadastrar:hover {background-color: purple;
+                  border: 4px outset green;
+                  box-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
+                  transition: background-color 1s, box-shadow 1s, border 1s;}
 
-.lista {
-    margin: 0;
-    padding: 0;
-}
+.lista {margin: 0; padding: 0;}
 
-.item {
-    list-style: none;
-    padding: 0.6em 2em;
-    background: #000000;
-    color: white;
-    border-radius: 50px;
-    margin: 0 0 1em;
-    width: 100%;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    gap: 1em;
-    font-size: 20px;
-    box-shadow: 0px 0px 25px purple;
-    animation-name: glow; animation-duration: 4s; animation-delay: 1.5s; animation-iteration-count: infinite;
-}
+.item {list-style: none;
+       padding: 0.6em 2em;
+       background: #000000;
+       color: white;
+       border-radius: 50px;
+       margin: 0 0 1em;
+       width: 100%;
+       box-sizing: border-box;
+       display: inline-flex;
+       align-items: center;
+       gap: 1em;
+       font-size: 20px;
+       box-shadow: 0px 0px 25px purple;
+       border: 2px outset purple;
+       animation-name: glow; animation-duration: 4s; animation-delay: 1.5s; animation-iteration-count: infinite;}
 
-.item strong {
-    border-radius: 50%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    Background: #4d1475;
-    font-weight: 400;
-}
+.item strong {border-radius: 50%;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 40px;
+              height: 40px;
+              Background: #4d1475;
+              border: 2px outset purple;
+              font-weight: 400;}
 
-button {
-    color: white;
-    background-color: crimson;
-    border: none;
-    border-radius: 25px;
-    margin: 10px;
-    transition: background-color 0.3s;
-}
+button {color: white;
+        background-color: crimson;
+        border: 2px outset red;
+        box-shadow: 0px 0px 15px red;
+        border-radius: 25px;
+        margin: 10px;
+        transition: background-color 1s;}
 
-button:hover {
-    background-color: red;
-    transition: background-color 0.3s;
+button:hover {background-color: red; transition: background-color 1s;}
+
+@media screen and (max-width: 768px){
+    .mochila {display: none;
+    }
+    .principal {
+      min-width: 100px;
+      max-width: 150px;
+      position: absolute; right: 2px; top: 300px;
+      z-index: 2;
+    }
+    .item {
+      max-width: 150px;
+      padding: 10px;
+      position: relative; right: 50px;
+    }
+    button {
+      position: relative;
+      right: 25px;
+    }
 }
