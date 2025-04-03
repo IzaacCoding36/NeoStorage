@@ -167,7 +167,7 @@ button:hover {background-color: red; transition: background-color 1s;}
       z-index: 2;
     }
     .item {
-      max-width: 150px;
+      max-width: 200px;
       padding: 10px;
       position: relative; right: 50px;
     }
