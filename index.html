@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,29 +12,33 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
 <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
- <h1 align="center" class="Titulo">NeoStorage</h1>
+    <header>
+        <h1 class="Titulo">NeoStorage</h1>
+    </header>
     <main class="conteudo">
-        <div class="principal">
-            <div class="mochila"></div>
-            <form action="" class="adicionar" id="novoItem">
-                <label for="nome" style="color:white">Nome</label>
-                <input type="text" name="nome" id="nome">
-                <label for="quantidade" style="color:white">Quantidade</label>
-                <input type="number" name="quantidade" id="quantidade">
+        <section class="principal">
+            <div class="mochila" role="img" aria-label="Ícone de mochila representando armazenamento"></div>
+            <form action="" class="adicionar" id="novoItem" role="form" aria-label="Formulário para adicionar novos itens">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o nome do item" required aria-describedby="nome-help">
+                <label for="quantidade">Quantidade</label>
+                <input type="number" name="quantidade" id="quantidade" placeholder="Digite a quantidade" min="1" required aria-describedby="quantidade-help">
                 <input type="submit" value="Adicionar" class="cadastrar" id="cadastrar">
             </form>
-        </div>
-        <ul class="lista" id="lista"></ul>
+        </section>
+        <section aria-label="Lista de itens armazenados">
+            <ul class="lista" id="lista" role="list"></ul>
+        </section>
     </main>
     <script src="js/main.js"></script>
 </body>
